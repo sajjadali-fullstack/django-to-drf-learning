@@ -23,5 +23,5 @@ urlpatterns = [
     path('', views.home_view),
     path('emp/', views.emp_data_view, name='emp_data'),
     path('emp/json/', views.emp_data_json_view, name='emp_json'),
-    path('cbv/', views.emp_data_api_json_view, name='emp_api_json'),
+    path('emp/json-response/', views.emp_data_api_json_view, name='emp_api_json'),
 ]
