@@ -5,34 +5,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page | Without Rest API</title>
+    <title>Home Page | Django DRF Prep</title>
+ 
+    <!-- Bootstrap 5 CSS for styling and responsiveness -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        /* Cool Gradient Background */
+        body {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+        }
 
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        /* Glassmorphism Card Container */
+        .main-container {
+            background: rgba(255, 255, 255, 0.1);
+            background-color: rgb(44, 104, 215);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            text-align: center;
+            max-width: 90%;
+        }
+
+        /* Badge-style Buttons in a single line */
+        .btn-group-custom {
+            display: flex;
+            flex-wrap: wrap; /* Screen choti hone par niche aa jayenge */
+            justify-content: center;
+            gap: 15px; /* Buttons ke bich ka gap */
+            margin-top: 30px;
+        }
+
+        .custom-badge-btn {
+            background: #00d2ff; /* Default color */
+            background: -webkit-linear-gradient(to right, #3a7bd5, #00d2ff);
+            background: linear-gradient(to right, #3a7bd5, #00d2ff);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px; /* Makes it look like a badge/pill */
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .custom-badge-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 210, 255, 0.4);
+            color: #fff;
+        }
+
+        hr {
+            border-color: rgba(255, 255, 255, 0.3);
+            margin: 20px 0;
+        }
+
+        p {
+            opacity: 0.8;
+            font-weight: 300;
+        }
+    </style>
 </head>
 
 <body>
-    <h1 align="center"> Django View Function to send HTML Response</h1>
-    <hr>
 
-    <p align="center">
-        This project demonstrates difference between Django HTML views and JSON APIs before learning Django REST
-        Framework (DRF).</p>
-    <hr>
+    <div class="main-container">
+        <h1 class="display-5 fw-bold">Django View Functions</h1>
+        <p class="lead">Difference between Django HTML views and JSON APIs (Pre-DRF Journey)</p>
+        
+        <hr>
 
-    <!-- Links -->
-    <a href="{% url 'emp_data' %}" target="_blank">
-        <button>Non-REST API (HTML Response)</button>
-    </a>
-    <br><br>
+        <div class="btn-group-custom">
+            <!-- Badge Buttons -->
+            <a href="{% url 'emp_data' %}" target="_blank" class="custom-badge-btn">
+                HTML Response
+            </a>
 
-    <a href="{% url 'emp_json' %}" target="_blank">
-        <button>JSON Response (HttpResponse)</button>
-    </a>
-    <br><br>
+            <a href="{% url 'emp_json' %}" target="_blank" class="custom-badge-btn">
+                JSON (HttpResponse)
+            </a>
 
-    <a href="{% url 'emp_api_json' %}" target="_blank">
-        <button>API Response (JsonResponse)</button>
-    </a>
+            <a href="{% url 'emp_api_json' %}" target="_blank" class="custom-badge-btn">
+                API (JsonResponse)
+            </a>
+
+            <a href="{% url 'api_json_cbv' %}" target="_blank" class="custom-badge-btn">
+                API (CBV)
+            </a>
+
+            <a href="{% url 'api_json_cbv2' %}" target="_blank" class="custom-badge-btn">
+                API (CBV2)
+            </a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (Optional but good to have) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

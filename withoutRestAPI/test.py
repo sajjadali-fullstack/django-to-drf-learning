@@ -99,3 +99,31 @@ print('='*40)
 
 #     print('=' * 40)
 
+
+
+#                               CBV
+
+BASE_URL = 'http://127.0.0.1:8000/'
+END_POINT = 'api/json-cbv/'
+
+respo = requests.get(BASE_URL + END_POINT)
+
+print(type(respo))
+print('-'*35)
+
+print(type(respo.json()))
+print('-'*15)
+
+# FATCH
+# Python Application Accessing this data 
+data = respo.json()
+
+print('Data From Django Application')
+print('='*40)
+
+print(f'Business ID         : {data['business_id']}')
+print(f'Business Man Name   : {data['business_man_name']}')
+print(f'Business Income     : {data['bus_income']}')
+print(f'Business Man Office : {data['business_man_office']}')
+
+print('='*40)

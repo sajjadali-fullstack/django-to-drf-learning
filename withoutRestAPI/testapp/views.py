@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 import json
+from django.views.generic import View  # 3
 
 
 # Create your business logic / views here👇.
@@ -74,3 +75,58 @@ def emp_data_api_json_view(request):
     
     
     return JsonResponse(emp_data)
+
+# CBV 
+class JsonCBV(View):
+    def get(self, *args, **kwargs):
+        business_data = {
+            'business_id':103,
+            'business_man_name':'Sajju',
+            'bus_income':10000000,
+            'business_man_office':'Pune',
+
+        }
+        return JsonResponse(business_data)
+
+
+class JsonCBV2(View):
+    def get(self, request, *args, **kwargs):
+        dict1 = {'msg':'This is GET method'}
+        # Convert DICT ==>  Json 
+        json_data = json.dumps(dict1)
+
+        return HttpResponse(json_data, 
+        content_type='application/json')
+
+
+    
+    def post(self, request, *args, **kwargs):
+        dict2 = {'msg':'This is POST method'}
+        # Convert DICT ==>  Json 
+        json_data = json.dumps(dict2)
+        
+        return HttpResponse(json_data,
+        content_type='application/json')
+
+
+    
+    def put(self, request, *args, **kwargs):
+        dict3 = {'msg':'This is PUT method'}
+        # Convert DICT ==>  Json 
+        json_data = json.dumps(dict3)
+
+        return HttpResponse(json_data,
+        content_type='application/json')
+
+
+
+   
+    def delete(self, request, *args, **kwargs):
+        dict4 = {'msg':'This is DELET method'}
+        # Convert DICT ==>  Json 
+        json_data = json.dumps(dict4)
+
+        return HttpResponse(json_data,
+        content_type='aplication/json')
+
+    
