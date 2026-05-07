@@ -36,7 +36,7 @@ The main goal of this project is to understand:
 - Using `JsonResponse`
 
 ---
-## PENDING Concept 🍎
+
 ## 2. Class-Based Views (CBV)
 
 - Basic GET request handling
@@ -74,11 +74,9 @@ Using Python `requests` library to:
 | `/emp/` | Returns HTML response |
 | `/emp/json/` | Returns JSON using HttpResponse |
 | `/emp/json-response/` | Returns JSON using JsonResponse |
+| `api/json-cbv/` | Class-based JSON response |
+| `api/json-cbv2/` | Handles GET, POST, PUT, DELETE methods |
 
-<!-- 
-| `/cbv/` | Class-based JSON response |
-| `/cbv2/` | Handles GET, POST, PUT, DELETE methods |
- -->
 ---
 
 # 📂 Project Structure
@@ -92,6 +90,7 @@ django-to-drf-learning/
 │   
 │
 ├── test.py
+├── test2.py
 ├── manage.py
 └── README.md
 ```
@@ -105,8 +104,7 @@ django-to-drf-learning/
 - JSON Handling
 - HTTP Methods
 - Requests Library
-<!-- 
-- Class-Based Views  -->
+- Class-Based Views
 
 ---
 
@@ -117,9 +115,7 @@ Through this project, I learned:
 - Difference between HTML and JSON responses
 - How APIs work internally
 - Why REST APIs are important
-<!-- 
 - How CBVs make code cleaner and structured
- -->
 - How Python applications consume APIs
 - Basics required before learning Django REST Framework (DRF)
 
@@ -129,7 +125,6 @@ Through this project, I learned:
 
 - Move towards Django REST Framework (DRF)
 - Function-Based Views (FBV)
-- Class-Based Views (CBV)
 - Learn Serializers
 - Learn APIView
 - Add database models
