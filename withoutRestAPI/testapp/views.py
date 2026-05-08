@@ -88,15 +88,18 @@ class JsonCBV(View):
         }
         return JsonResponse(business_data)
 
+# 3.Step  Here we will create a object of mixings.py class
+from testapp.mixins import HttpResponseMixin
 
-class JsonCBV2(View):
+# Child class of mixings class
+class JsonCBV2(View, HttpResponseMixin):  # Inherit this class--> HttpResponseMixin
     def get(self, request, *args, **kwargs):
         dict1 = {'msg':'This is GET method'}
         # Convert DICT ==>  Json 
         json_data = json.dumps(dict1)
 
-        return HttpResponse(json_data, 
-        content_type='application/json')
+        # create a object of mixings.py class
+        return self.render_to_response(json_data)  # This json_data will go to mixings class
 
 
     
@@ -104,10 +107,7 @@ class JsonCBV2(View):
         dict2 = {'msg':'This is POST method'}
         # Convert DICT ==>  Json 
         json_data = json.dumps(dict2)
-        
-        return HttpResponse(json_data,
-        content_type='application/json')
-
+        return self.render_to_response(json_data)  # This json_data will go to mixings class
 
     
     def put(self, request, *args, **kwargs):
@@ -115,8 +115,7 @@ class JsonCBV2(View):
         # Convert DICT ==>  Json 
         json_data = json.dumps(dict3)
 
-        return HttpResponse(json_data,
-        content_type='application/json')
+        return self.render_to_response(json_data)  # This json_data will go to mixings class
 
 
 
@@ -126,7 +125,7 @@ class JsonCBV2(View):
         # Convert DICT ==>  Json 
         json_data = json.dumps(dict4)
 
-        return HttpResponse(json_data,
-        content_type='aplication/json')
+        return self.render_to_response(json_data)  # This json_data will go to mixings class
+        
 
     
