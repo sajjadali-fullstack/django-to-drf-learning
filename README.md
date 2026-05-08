@@ -1,4 +1,4 @@
-# Django Basics to DRF Learning Project
+# Django Without Rest
 
 This project is created while learning Django fundamentals and transitioning towards Django REST Framework (DRF).
 
