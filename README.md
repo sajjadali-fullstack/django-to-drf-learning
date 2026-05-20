@@ -14,7 +14,7 @@ It demonstrates how to return data using different approaches like:
 
 ---
 
-### 🛍️ Dashboard Page
+### ⚡ Dashboard Page
 ![Dashboard](django_without_rest_dashboard.png)
 
 ---
