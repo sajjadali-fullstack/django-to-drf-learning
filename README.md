@@ -51,9 +51,7 @@ The main goal of this project is to understand:
 - Basic GET request handling
 - Handling multiple HTTP methods:
   - GET
-  - POST
-  - PUT
-  - DELETE
+  
 
 ---
 
