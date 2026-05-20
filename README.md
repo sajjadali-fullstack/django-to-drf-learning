@@ -6,11 +6,16 @@ It demonstrates how to return data using different approaches like:
 
 - `HttpResponse`
 - `JsonResponse`
-<!-- Function-Based Views (FBV) -->
+ Function-Based Views (FBV)
 - Class-Based Views (CBV)
 - Custom Mixins
 - Python API consumption using `requests`
 - Basic API testing
+
+---
+
+### 🛍️ Dashboard Page
+![Dashboard](django_without_rest_dashboard.png)
 
 ---
 
@@ -32,14 +37,14 @@ The main goal of this project is to understand:
 
 # 📌 Features Covered
 
-<!--
+
 ## 1. Function-Based Views (FBV)
 
 - Returning HTML response using `HttpResponse`
 - Returning JSON using `json.dumps()`
 - Using `JsonResponse`
 ---
--->
+
 
 ## 2. Class-Based Views (CBV)
 
